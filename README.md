@@ -41,10 +41,11 @@
 This project is implemented with the Active Learning package [modAL](https://github.com/modAL-python/modAL)
 
 <h3 align="center"> How to Run</h3>
-<h2>Installation</h2>
+Installation
 ```
 pip install activizer
 ```
+
 <h2>Open python console and type</h2>
 ```
 >>>from activizer import app
