@@ -45,7 +45,12 @@ Installation
 ```
 pip install activizer
 ```
-
+Some basic Git commands are:
+```
+git status
+git add
+git commit
+```
 <h2>Open python console and type</h2>
 ```
 >>>from activizer import app
