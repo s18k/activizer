@@ -359,23 +359,17 @@ def query():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(UPLOAD_FOLDER, filename))
-        if(filename.split(".")[1]=="rar"):
-            continue
-        else:
-            zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
-            zip_ref.extractall(UPLOAD_FOLDER)
-            zip_ref.close()
+        zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
+        zip_ref.extractall(UPLOAD_FOLDER)
+        zip_ref.close()
 
     
     if test and allowed_file(test.filename):
         filename = secure_filename(test.filename)
         test.save(os.path.join(UPLOAD_FOLDER, filename))
-        if(filename.split(".")[1]=="rar"):
-            continue
-        else:
-            zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
-            zip_ref.extractall(UPLOAD_FOLDER)
-            zip_ref.close()
+        zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
+        zip_ref.extractall(UPLOAD_FOLDER)
+        zip_ref.close()
     
 
     st = request.form.get('strategy_select')

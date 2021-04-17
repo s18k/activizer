@@ -1,7 +1,7 @@
 import re
 from setuptools import setup
 
-version = '1.0.1'
+version = '1.0.2'
 
 
 def parse_requirements(file_name):
