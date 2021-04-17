@@ -44,11 +44,7 @@ This project is implemented with the Active Learning package [modAL](https://git
 <h3> Installation </h3>
 pip install activizer
 
-<h3>Running</h3>
-<p>
-Open Python console     
-</p>
-<h3> </h3>
+<h3>Open Python console and run the following commands</h3>
 - from activizer import app
 - app.run()
  
