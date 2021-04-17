@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Active Learning</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+<!--    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">-->
+</head>
+<body style="background: #2F2FA2">
+    <center  >
+<!--        <h1>MNIST Digits Dataset using Active Learning</h1>-->
+        <br>
+        <h1 style="color:white">Interface for Active Learning </h1>
+        <br>
+
+        <form method="POST" enctype=multipart/form-data class="text-center border border-light p-5"  style="height: 260px; width: 800px; border: 1px solid black; background:white" action="{{url_for('query')}}">
+
+
+
+            <div class="form-group" style="padding:10px;">
+                <div class="input-group" style="padding:5px">
+
+                    <span class="input-group-addon" style="width:300px">Please select the Classifier Algorithm</span>
+                        <select name="classifier_select" class="selectpicker form-control">
+                          {% for o in data %}
+                          <option value="{{ o.name }}">{{ o.name }}</option>
+                          {% endfor %}
+                        </select>
+                </div>
+
+                <div class="input-group" style="padding:5px">
+                    <span class="input-group-addon" style="width:300px">Please select the Query Strategy</span>
+                        <select name="strategy_select" class="selectpicker form-control" >
+                          {% for o in query %}
+                          <option value="{{ o.name }}">{{ o.name }}</option>
+                          {% endfor %}
+                        </select>
+                </div>
+
+
+            <input style="padding:5px" name="queries" type="number" class="form-control mb-4" placeholder="Enter the number of samples you want to label">
+                <div class="input-group" style="padding:5px">
+                    <span class="input-group-addon" style="width:300px">Please select Training Dataset(.Zip)</span>
+                    <input type=file name=file style="padding:5px" placeholder="">
+                </div>
+                <div class="input-group" style="padding:5px">
+                    <span class="input-group-addon" style="width:300px">Please select Testing Dataset(.Zip)</span>
+                    <input type=file name=test_file style="padding:5px" placeholder="">
+                </div>
+
+            <div class="input-group" style="padding:5px">
+                <span class="input-group-addon" style="width:300px">Please select the Structure of Dataset</span>
+                <select name="structure_select" class="selectpicker form-control" >
+                    {% for o in structure %}
+                    <option value="{{ o.id }}">{{ o.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            </div>
+        <button class="btn btn-info btn-block my-4" type="submit" value="next">Submit</button>
+
+</form>
+
+    </center>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

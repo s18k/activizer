@@ -1,0 +1,9 @@
+Flask>=1.1.1
+numpy>=1.9.2
+scikit-learn>=0.18
+pathlib>=1.0.1
+modAL>=0.4.0
+Pillow>=7.2.0
+werkzeug>=0.16.1
+sklearn>=0.0
+scikit-image>=0.18.1
