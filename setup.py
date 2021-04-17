@@ -1,7 +1,7 @@
 import re
 from setuptools import setup
 
-version = '1.0.2'
+version = '1.0.3'
 
 
 def parse_requirements(file_name):
@@ -26,7 +26,7 @@ setup(
     description='An Interface for Active Learning',
     author='Shreyas Kamath',
     author_email='shreyaskamath18@gmail.com',
-    license='MIT',
+    license='GNU General Public License v3.0',
     url='https://github.com/s18k/activizer',
     
 	download_url='{0}/archive/{1}-{2}'.format(base_url, package_name,version),
