@@ -1,0 +1,4 @@
+include LICENSE
+include requirements.txt
+recursive-include activizer/templates *
+recursive-include activizer/static *

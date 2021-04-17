@@ -1,4 +1,4 @@
-
+from activizer import app
 import base64
 import pickle
 from io import StringIO
@@ -19,7 +19,6 @@ import re
 from pathlib import Path
 
 
-app = Flask(__name__, static_url_path="", static_folder="static ")
 app.secret_key = "super secret key"
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -673,6 +672,3 @@ def query():
         accuracy.append(accuracy_scores)
         data = Data(n_queries,X_pool,y_pool,None,committee,accuracy,X_test,y_test,classlist,n_queries,image_data)
         return helper()
-
-
-app.run(debug=True)
