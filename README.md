@@ -41,9 +41,10 @@
 This project is implemented with the Active Learning package [modAL](https://github.com/modAL-python/modAL)
 
 <h3 align="center"> How to Run</h3>
-Installation
+<h3> Classifiers </h3>
+```
 pip install activizer
-
+```
 
 - Select the Classifier Algorithm, the Query Strategy and give the number of samples you wish to label. Then select the training / testing dataset in Zip format
 
