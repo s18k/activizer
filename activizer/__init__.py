@@ -14,7 +14,7 @@ from io import BytesIO
 from PIL import Image
 import os
 from activizer.data import Data
-import patoolib
+
 import re
 from pathlib import Path
 

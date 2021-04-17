@@ -14,7 +14,7 @@ from io import BytesIO
 from PIL import Image
 import os
 from activizer.data import Data
-import patoolib
+
 import re
 from pathlib import Path
 
@@ -360,7 +360,7 @@ def query():
         filename = secure_filename(file.filename)
         file.save(os.path.join(UPLOAD_FOLDER, filename))
         if(filename.split(".")[1]=="rar"):
-            patoolib.extract_archive(os.path.join(UPLOAD_FOLDER, filename), outdir=UPLOAD_FOLDER)
+            continue
         else:
             zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
             zip_ref.extractall(UPLOAD_FOLDER)
@@ -371,7 +371,7 @@ def query():
         filename = secure_filename(test.filename)
         test.save(os.path.join(UPLOAD_FOLDER, filename))
         if(filename.split(".")[1]=="rar"):
-            patoolib.extract_archive(os.path.join(UPLOAD_FOLDER, filename), UPLOAD_FOLDER)
+            continue
         else:
             zip_ref = zipfile.ZipFile(os.path.join(UPLOAD_FOLDER, filename), 'r')
             zip_ref.extractall(UPLOAD_FOLDER)
