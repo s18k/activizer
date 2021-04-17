@@ -1,12 +1,12 @@
 Metadata-Version: 1.1
 Name: activizer
-Version: 1.0.0
+Version: 1.0.1
 Summary: An Interface for Active Learning
 Home-page: https://github.com/s18k/activizer
 Author: Shreyas Kamath
 Author-email: shreyaskamath18@gmail.com
 License: MIT
-Download-URL: https://github.com/s18k/ativizer//archive/activizer-1.0.0
+Download-URL: https://github.com/s18k/ativizer//archive/activizer-1.0.1
 Description: UNKNOWN
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
