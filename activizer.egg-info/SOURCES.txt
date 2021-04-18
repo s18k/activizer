@@ -1,7 +1,6 @@
 LICENSE
 MANIFEST.in
 README.md
-README.rst
 requirements.txt
 setup.cfg
 setup.py
