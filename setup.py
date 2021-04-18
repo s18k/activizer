@@ -1,7 +1,7 @@
 import re
 from setuptools import setup
 
-version = '1.0.4'
+version = '1.0.5'
 
 from os import path
 this_directory = path.abspath(path.dirname(__file__))
@@ -31,6 +31,8 @@ setup(
     author='Shreyas Kamath',
     author_email='shreyaskamath18@gmail.com',
     license='GNU General Public License v3.0',
+	long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/s18k/activizer',
     
 	download_url='{0}/archive/{1}-{2}'.format(base_url, package_name,version),
