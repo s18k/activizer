@@ -9,7 +9,7 @@
 
 </p>
 
-<h3 align="center"> About Active Learning</h3>
+<h3> About Active Learning</h3>
 
 <p > Active learning is the process by which your model chooses the training data it will learn the most from, 
     with the idea being that your model will predict better on your test set with less data if it’s encouraged
