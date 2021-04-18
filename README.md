@@ -1,5 +1,6 @@
-<img src="https://zenodo.org/badge/358878863.svg" align="center">
-
+<p align="center">
+<img src="https://zenodo.org/badge/358878863.svg">
+</p>
 <h1 align="center"> Activizer </h1>
 
 
