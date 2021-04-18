@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org/badge/latestdoi/358878863)
+<p align="center">[![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org/badge/latestdoi/358878863)</p>
 
 <h1 align="center"> Activizer </h1>
 
