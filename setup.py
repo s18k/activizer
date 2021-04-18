@@ -1,8 +1,12 @@
 import re
 from setuptools import setup
 
-version = '1.0.3'
+version = '1.0.4'
 
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 def parse_requirements(file_name):
     requirements = []
