@@ -70,6 +70,7 @@ pip install activizer
 <img src="images/Screenshot (491).png"> <br>
 </p>
 
+
 - The user can see the images along with the labels provided by the algorithm selected during training. The trained model can be downloaded in pickle format (.pkl file) and can be used for prediction by unpickling it.
 
 - The Interface can be used for prediction by uploading the validation dataset in Zip format. 
