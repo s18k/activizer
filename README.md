@@ -42,7 +42,7 @@
 
 
 This project is implemented with the Active Learning package [modAL](https://github.com/modAL-python/modAL)
-
+<p>This project requires python 3.x installed on your machine </p>
 <h3 align="center"> How to Run</h3>
 <h3> Installation </h3>
 pip install activizer
