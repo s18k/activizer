@@ -53,7 +53,8 @@ The package can be installed usin the command : pip install activizer
 
 - from activizer import app
 - app.run()
-
+<img src="images/Screenshot (498).png" align="center" width="900"> <br>
+- Copy the url in the browser
 - Select the Classifier Algorithm, the Query Strategy and give the number of samples you wish to label. Then select the training / testing dataset in Zip format
 
 <p align="center">
