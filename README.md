@@ -11,9 +11,13 @@
 
 <h3> About Active Learning</h3>
 
-<p > Active learning is the process by which your model chooses the training data it will learn the most from, 
-    with the idea being that your model will predict better on your test set with less data if it’s encouraged
-     to pick the samples it wants to learn from. </p> <br>
+<p > Active learning is the process by which a learning algorithm can query a user
+interactively to label data points which are close to the decision boundary formed during classification </p> <br>
+
+<p>The primary objective of this project is to build an Interface for Active learning which
+simplifies the process of chosing algorithms,query strategies and labels This eliminates the task of writing programs for each task  
+The interface helps annotators of various domains to label data in an interactive manner and also provides features of saving the final model and results
+</p> <br>
 
 
 <p>Interface for Active Learning supports Image dataset where the user can upload data in Zip format. It supports 3 classifiers and 7 query strategies.<p>
