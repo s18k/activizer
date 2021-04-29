@@ -28,7 +28,7 @@ The interface helps annotators of various domains to label data in an interactiv
 - Random Forest Classifier
 
 - Decision Tree Classifier
-<h3> Query By Committee </h3>
+<h3> Query Strategies </h3>
 
 - Uncertainty Sampling
 
