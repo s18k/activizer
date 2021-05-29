@@ -50,7 +50,7 @@ This project is implemented with the Active Learning package [modAL](https://git
 <h3 align="center"> How to Run</h3>
 <p>This project requires python 3.x installed on your machine </p>
 <h3> Installation </h3>
-The package can be installed usin the command : pip install activizer
+The package can be installed using the command : pip install activizer
 
 <h3>Open Python console and run the following commands</h3>
 
