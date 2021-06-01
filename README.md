@@ -78,7 +78,7 @@ The package can be installed using the command : pip install activizer
 </p>
 
 
-- The user can see the images along with the labels provided by the algorithm selected during training. The trained model can be downloaded in pickle format (.pkl file) and can be used for prediction by unpickling it.
+- The user can see the images along with the labels provided by the algorithm selected during training. The trained model can be downloaded in pickle format (.pickle file) and can be used for prediction by clicking "Already have a model" on the Main Page. The user can then upload the pickle file and use the model to classify images
 
 - The Interface can be used for prediction by uploading the validation dataset in Zip format. 
 

@@ -1,14 +1,15 @@
 Metadata-Version: 2.1
 Name: activizer
-Version: 1.0.5
+Version: 1.0.7
 Summary: An Interface for Active Learning
 Home-page: https://github.com/s18k/activizer
 Author: Shreyas Kamath
 Author-email: shreyaskamath18@gmail.com
 License: GNU General Public License v3.0
-Download-URL: https://github.com/s18k/ativizer//archive/activizer-1.0.5
-Description: [![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org/badge/latestdoi/358878863)
-        
+Download-URL: https://github.com/s18k/ativizer//archive/activizer-1.0.7
+Description: <p align="center">
+        <img src="https://zenodo.org/badge/358878863.svg">
+        </p>
         <h1 align="center"> Activizer </h1>
         
         
@@ -17,14 +18,18 @@ Description: [![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org
         
         </p>
         
-        <h3 align="center"> About Active Learning</h3>
+        <h3> About Active Learning</h3>
         
-        <p > Active learning is the process by which your model chooses the training data it will learn the most from, 
-            with the idea being that your model will predict better on your test set with less data if it’s encouraged
-             to pick the samples it wants to learn from. </p> <br>
+        <p > Active learning is the process by which a learning algorithm can query a user
+        interactively to label data points which are close to the decision boundary formed during classification </p> <br>
+        
+        <p>The primary objective of this project is to build an Interface for Active learning which
+        simplifies the process of chosing algorithms,query strategies and labels This eliminates the task of writing programs for each task  
+        The interface helps annotators of various domains to label data in an interactive manner and also provides features of saving the final model and results
+        </p> <br>
         
         
-        <p>Interface for Active Learning supports Image dataset where the user can upload data in Zip or RAR format. It supports 3 classifiers and 7 query strategies.<p>
+        <p>Interface for Active Learning supports Image dataset where the user can upload data in Zip format. It supports 3 classifiers and 7 query strategies.<p>
         <h3> Classifiers </h3>
         
         - KNN Classifier
@@ -32,7 +37,7 @@ Description: [![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org
         - Random Forest Classifier
         
         - Decision Tree Classifier
-        <h3> Query By Committee </h3>
+        <h3> Query Strategies </h3>
         
         - Uncertainty Sampling
         
@@ -52,14 +57,17 @@ Description: [![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org
         This project is implemented with the Active Learning package [modAL](https://github.com/modAL-python/modAL)
         
         <h3 align="center"> How to Run</h3>
+        <p>This project requires python 3.x installed on your machine </p>
         <h3> Installation </h3>
-        pip install activizer
+        The package can be installed using the command : pip install activizer
         
         <h3>Open Python console and run the following commands</h3>
         
         - from activizer import app
         - app.run()
+        - <img src="images/Screenshot (498).png" align="center" width="900"> <br>
         
+        - Copy the url in the browser
         - Select the Classifier Algorithm, the Query Strategy and give the number of samples you wish to label. Then select the training / testing dataset in Zip format
         
         <p align="center">
@@ -78,7 +86,8 @@ Description: [![DOI](https://zenodo.org/badge/358878863.svg)](https://zenodo.org
         <img src="images/Screenshot (491).png"> <br>
         </p>
         
-        - The user can see the images along with the labels provided by the algorithm selected during training. The trained model can be downloaded in pickle format (.pkl file) and can be used for prediction by unpickling it.
+        
+        - The user can see the images along with the labels provided by the algorithm selected during training. The trained model can be downloaded in pickle format (.pickle file) and can be used for prediction by clicking "Already have a model" on the Main Page. The user can then upload the pickle file and use the model to classify images
         
         - The Interface can be used for prediction by uploading the validation dataset in Zip format. 
         
