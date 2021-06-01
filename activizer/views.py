@@ -43,6 +43,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 
+from activizer.random_sampling import random_sampling as random_sampling
 import numpy as np
 
 RANDOM_STATE_SEED = 1
@@ -59,10 +60,28 @@ def download():
     filename = 'result.csv'
     return send_file(os.path.join(UPLOAD_FOLDER, filename), as_attachment=True)
 
+@app.route('/upload_model', methods=['GET', 'POST'])
+def upload_model():
+    return render_template("upload_model.html")
+
+@app.route('/get_model', methods=['GET','POST'])
+def get_model():
+    file = request.files['file']
+    file.save(os.path.join(UPLOAD_FOLDER, file.filename))
+    with open(os.path.join(UPLOAD_FOLDER, file.filename), 'rb') as handle:
+        params = pickle.load(handle)
+    
+    accuracy = []
+    accuracy.append(params["accuracy"])
+    data = Data(params["counter"],params["X_pool"],params["y_pool"],params["learner"],params["committee"],accuracy
+             ,params["X_test"],params["y_test"],params["classlist"],params["queries"],params["image_data"])
+
+    return render_template("predict.html")
+
 
 @app.route('/download_model', methods=['GET', 'POST'])
 def download_model():
-    filename = 'prediction_model.pkl'
+    filename = 'model.pickle'
     return send_file(os.path.join(UPLOAD_FOLDER, filename), as_attachment=True)
 
 @app.route('/display_image/',methods=['GET','POST'])
@@ -86,10 +105,6 @@ def display_image():
     return render_template("display_image.html",label=label,img_data=encoded_img_data.decode('utf-8'))
 
 
-def random_sampling(classifier, X_pool):
-    n_samples = len(X_pool)
-    query_idx = np.random.choice(range(n_samples))
-    return query_idx, X_pool[query_idx]
 
 def generate_image():
     num_tiles = 20
@@ -314,6 +329,11 @@ def helper():
         params["X_pool"] = X_pool
         params["y_pool"] = y_pool
         params["counter"] = int(counter)-1
+        params["X_test"] = X_test
+        params["y_test"] = y_test
+        params["queries"] = queries
+        params["classlist"] = classlist
+        params["image_data"] = image_data
         params["image_name_list"] = image_name_list
         params["image_instance_name"] = image_instance_name
         params["image_instance"] = image_instance
@@ -336,12 +356,17 @@ def helper():
             count += 1
         accuracy_string = accuracy_string[:-1]
         iterations = iterations[:-1]
-
+        prediction_model = {}
+        prediction_model["classlist"] = classlist
         if learner!=None:
-            prediction_model = learner
+            params["learner"] = learner
+            params["committee"] = learner
+
         else:
-            prediction_model = committee
-        pickle.dump(prediction_model,open(os.path.join(UPLOAD_FOLDER,"prediction_model.pkl"),"wb"))
+            params["committee"] = committee
+            params["learner"] = committee
+        with open(os.path.join(UPLOAD_FOLDER,'model.pickle'), 'wb') as handle:
+            pickle.dump(params, handle, protocol=pickle.HIGHEST_PROTOCOL)
         return render_template("final.html",accuracy = float(data.accuracy[-1])*100,data = accuracy_string,iteration = iterations,
                                list = image_name_list)
 
